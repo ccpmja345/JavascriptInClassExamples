@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<title>Title</title>-->
+</head>
+<body>
+
+Test11111111
+
+<script type="text/javascript">
+    //Option strict: variable must be declared
+    "use strict";
+
+    //variables
+    var qtr1, qtr2, qtr3, qtr4; //sales input
+    var totSales;   //Total Sales
+    var qtrAvg;     //Quarterly Average
+    //constants
+    var ES = "";        //empty string
+    var BR = "<br>";    //line break
+    var PA = "<p>";     //paragraph
+
+    document.write
+        ("<h4>Nina's Nifty 99c Annual Report</h4>");
+    document.title = "NN99c Annual Report";
+
+    /*document.write
+    ("<h4>" + busName + " Annual Report</h4>");
+    document.title = busName + " Annual Report";*/
+
+    //INPUT
+    qtr1 = prompt("Enter Q1 sales:", ES);
+    qtr1 = parseFloat(qtr1);
+    qtr2 = prompt("Enter Q2 sales:", ES);
+    qtr2 = parseFloat(qtr2);
+    qtr3 = prompt("Enter Q3 sales:", ES);
+    qtr3 = parseFloat(qtr3);
+    qtr4 = prompt("Enter Q4 sales:", ES);
+    qtr4 = parseFloat(qtr4);
+
+    //Alternative:
+    /*qtr4 =
+        parseFloat(prompt("Enter Q4 sales:", ES));
+     */
+
+    //PROCESS
+    //Compute the annual total:
+    totSales = qtr1 + qtr2 + qtr3 + qtr4;
+    //Use the total to compute the average
+    qtrAvg = totSales / 4.0;
+
+    //OUTPUT
+    document.write("2015 Total Sales: $");
+    document.write(totSales.toString() + BR);
+    document.write("Avg Quarterly Sales: $");
+    document.write(qtrAvg.toString() + BR);
+    document.write("Thanks!");
+
+</script>
+
+Test22222222
+
+
+</body>
+</html>
