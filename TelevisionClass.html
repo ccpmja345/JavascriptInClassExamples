@@ -19,13 +19,18 @@
         }
 
         function setValues(manufac, diag, price) {
-
+            this.manufacturer = manufac;
+            this.diagonalSize = diag;
+            this.retailPrice = price;
         }
 
         function displayInfo() {
             document.tvform.newPrice.value =
                 this.retailPrice;
-
+            document.tvform.newSize.value =
+                this.diagonalSize;
+            document.tvform.newManufacturer.value =
+                this.manufacturer;
         }
 
         function clearValues() {
@@ -49,9 +54,9 @@
     <input type="button" value="set values" name="setVal"
            onclick="" size="20"/><br>
     <input type="button" value="get values" name="getVal"
-           onclick="" size="20"/><br>
+           onclick="myFirstTV.displayInfo()" size="20"/><br>
     <input type="button" value="clear values" name="clearVal"
-           onclick="clearValues();" size="20"/>
+           onclick="myFirstTV.clearValues();" size="20"/>
 
 </form>
 <script type="text/javascript">
@@ -63,7 +68,7 @@
     var myNextTV = new Television("", 0, 0);
     myNextTV.setValues("LG", 60, 1299.99);
 
-    myFirstTV.displayInfo();
+    //myFirstTV.displayInfo();
     myNextTV.displayInfo();
 
 </script>
